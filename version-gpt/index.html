@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Catálogo de plantas de un jardín, con información sobre especies de interior y exterior.">
+    <title>Jardín Verde | Catálogo de plantas</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+```
+<header class="site-header" id="inicio">
+    <div class="container header-inner">
+        <div class="brand">
+            <p class="brand-kicker">Catálogo botánico</p>
+            <h1>Jardín Verde</h1>
+            <p class="brand-description">Un espacio para conocer y cuidar nuestras plantas.</p>
+        </div>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#sobre-el-sitio">Sobre el sitio</a></li>
+                <li><a href="#catalogo">Plantas</a></li>
+                <li><a href="#mantenimiento">Quién mantiene el sitio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="contenido-principal">
+    <section class="hero" aria-labelledby="titulo-hero">
+        <div class="container hero-content">
+            <div>
+                <p class="eyebrow">Bienvenido al jardín</p>
+                <h2 id="titulo-hero">Descubre nuestras plantas</h2>
+                <p>
+                    Explora una selección de especies de interior y exterior.
+                    Cada ficha incluye una imagen y un documento PDF con información
+                    adicional para facilitar su cuidado.
+                </p>
+                <a class="button button-primary" href="#catalogo">Ver catálogo</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="sobre-el-sitio" aria-labelledby="titulo-sobre">
+        <div class="container narrow-container">
+            <p class="eyebrow">Información</p>
+            <h2 id="titulo-sobre">Sobre el sitio</h2>
+            <p>
+                Jardín Verde es un catálogo estático pensado para organizar y
+                consultar información básica sobre las plantas de un jardín.
+                Las especies están clasificadas en dos grupos: plantas de interior
+                y plantas de exterior.
+            </p>
+            <p>
+                El sitio utiliza HTML5 semántico y CSS3, priorizando una navegación
+                sencilla, un diseño adaptable y características de accesibilidad.
+            </p>
+        </div>
+    </section>
+
+    <section class="section catalog-section" id="catalogo" aria-labelledby="titulo-catalogo">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Catálogo</p>
+                <h2 id="titulo-catalogo">Plantas del jardín</h2>
+                <p>
+                    Selecciona una categoría para filtrar las plantas sin necesidad
+                    de JavaScript.
+                </p>
+            </div>
+
+            <div class="plant-filter">
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="filtro-todas"
+                    class="filter-control"
+                    checked
+                >
+                <label for="filtro-todas" class="filter-label">Todas</label>
+
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="filtro-interior"
+                    class="filter-control"
+                >
+                <label for="filtro-interior" class="filter-label">Interior</label>
+
+                <input
+                    type="radio"
+                    name="categoria"
+                    id="filtro-exterior"
+                    class="filter-control"
+                >
+                <label for="filtro-exterior" class="filter-label">Exterior</label>
+
+                <div class="plants-grid">
+                    <article class="plant-card plant-interior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/monstera.jpg"
+                                alt="Monstera deliciosa con hojas grandes verdes y perforadas"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Interior</p>
+                            <h3>Monstera deliciosa</h3>
+                            <p>
+                                Planta tropical de hojas grandes que prospera
+                                con luz indirecta y ambientes cálidos.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/monstera.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Monstera deliciosa"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plant-card plant-interior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/sansevieria.jpg"
+                                alt="Sansevieria con hojas verticales verdes y amarillas"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Interior</p>
+                            <h3>Sansevieria</h3>
+                            <p>
+                                Especie resistente y de bajo mantenimiento,
+                                adecuada para distintos espacios interiores.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/sansevieria.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Sansevieria"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plant-card plant-interior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/potus.jpg"
+                                alt="Poto de hojas verdes en una maceta, con tallos colgantes"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Interior</p>
+                            <h3>Poto</h3>
+                            <p>
+                                Planta trepadora o colgante de crecimiento rápido,
+                                muy utilizada en interiores luminosos.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/potus.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Poto"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plant-card plant-exterior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/retamas.jpg"
+                                alt="Retama con abundantes flores amarillas al aire libre"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Exterior</p>
+                            <h3>Retama</h3>
+                            <p>
+                                Arbusto de exterior caracterizado por sus ramas
+                                verdes y sus numerosas flores amarillas.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/retamas.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Retama"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plant-card plant-exterior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/lavanda.jpg"
+                                alt="Planta de lavanda con flores violetas en un jardín exterior"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Exterior</p>
+                            <h3>Lavanda</h3>
+                            <p>
+                                Planta aromática que disfruta de lugares soleados
+                                y suelos con buen drenaje.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/lavanda.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Lavanda"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="plant-card plant-exterior">
+                        <div class="plant-image-wrapper">
+                            <img
+                                src="imagenes/rosal.jpg"
+                                alt="Rosal con flores rosadas en un jardín exterior"
+                                width="640"
+                                height="480"
+                            >
+                        </div>
+                        <div class="plant-card-content">
+                            <p class="plant-category">Exterior</p>
+                            <h3>Rosal</h3>
+                            <p>
+                                Arbusto ornamental de floración vistosa que
+                                requiere buena iluminación y cuidados periódicos.
+                            </p>
+                            <a
+                                class="pdf-link"
+                                href="info/rosal.pdf"
+                                download
+                                aria-label="Descargar información en PDF sobre Rosal"
+                            >
+                                Descargar información PDF
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-light" id="mantenimiento" aria-labelledby="titulo-mantenimiento">
+        <div class="container narrow-container">
+            <p class="eyebrow">Responsable</p>
+            <h2 id="titulo-mantenimiento">Quién mantiene el sitio</h2>
+            <p>
+                El sitio es mantenido por la persona responsable del cuidado del
+                jardín y de la actualización del catálogo de plantas.
+            </p>
+            <div class="maintainer-card">
+                <div class="maintainer-avatar" aria-hidden="true">JG</div>
+                <div>
+                    <h3>Jardín Verde</h3>
+                    <p>
+                        Responsable del mantenimiento del jardín, la organización
+                        de las fichas y la actualización de la información.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contacto" aria-labelledby="titulo-contacto">
+        <div class="container">
+            <div class="section-heading">
+                <p class="eyebrow">Contacto</p>
+                <h2 id="titulo-contacto">Envíanos un mensaje</h2>
+                <p>
+                    Completa el formulario para realizar una consulta relacionada
+                    con el jardín o las plantas del catálogo.
+                </p>
+            </div>
+
+            <form class="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        autocomplete="name"
+                        required
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        autocomplete="email"
+                        required
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="asunto">Asunto</label>
+                    <input
+                        type="text"
+                        id="asunto"
+                        name="asunto"
+                        required
+                        aria-required="true"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        rows="7"
+                        required
+                        aria-required="true"
+                    ></textarea>
+                </div>
+
+                <button class="button button-primary" type="submit">
+                    Enviar mensaje
+                </button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>
+            &copy; 2026 Jardín Verde. Todos los derechos reservados.
+        </p>
+        <p>
+            <a href="#inicio">Volver al inicio</a>
+        </p>
+    </div>
+</footer>
+```
+
+</body>
+</html>

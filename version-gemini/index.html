@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jardín Botánico Silvestre: Colección botánica viva de plantas de interior y exterior. Consulta fichas técnicas descargables en PDF, consejos de cultivo ecológico y mantente en contacto.">
+  <title>Jardín Botánico Silvestre | Catálogo de Plantas de Interior y Exterior</title>
+  
+  <!-- Enlace obligatorio a la hoja de estilos externa -->
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+
+  <!-- Enlaces de salto accesible para navegación asistida con teclado (WCAG 2.4.1) -->
+  <a href="#contenido-principal" class="salto-accesible">Saltar al contenido principal</a>
+  <a href="#catalogo" class="salto-accesible">Saltar directamente al catálogo de plantas</a>
+
+  <!-- ==========================================
+       1. ENCABEZADO Y BARRA DE NAVEGACIÓN
+       ========================================== -->
+  <header id="encabezado" class="encabezado-sitio" role="banner">
+    <div class="contenedor encabezado-contenedor">
+      <div class="marca-sitio">
+        <span class="marca-icono" aria-hidden="true">🌿</span>
+        <div class="marca-textos">
+          <span class="marca-titulo">Jardín Silvestre</span>
+          <span class="marca-subtitulo">Santuario Botánico &amp; Huerto Vivo</span>
+        </div>
+      </div>
+
+      <!-- Navegación principal accesible con enlaces ancla a las secciones -->
+      <nav class="navegacion-principal" aria-label="Navegación principal del sitio">
+        <ul class="nav-lista">
+          <li class="nav-item"><a href="#sobre-el-sitio" class="nav-enlace">Sobre el jardín</a></li>
+          <li class="nav-item"><a href="#catalogo" class="nav-enlace">Catálogo de plantas</a></li>
+          <li class="nav-item"><a href="#cuidador" class="nav-enlace">Quién cuida el jardín</a></li>
+          <li class="nav-item"><a href="#contacto" class="nav-enlace nav-enlace-cta">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       HERO / PRESENTACIÓN PRINCIPAL
+       ========================================== -->
+  <section class="seccion-hero" aria-labelledby="hero-titulo">
+    <div class="contenedor hero-contenedor">
+      <div class="hero-contenido">
+        <span class="etiqueta-destacada">Conservación &amp; Naturaleza Viva</span>
+        <h1 id="hero-titulo" class="hero-titulo">Un espacio vivo para descubrir, aprender y cultivar la botánica</h1>
+        <p class="hero-bajada">
+          Descubre nuestra selección de plantas autóctonas y ornamentales, cultivadas bajo estrictos principios agroecológicos y respeto por la biodiversidad.
+        </p>
+        <div class="hero-acciones">
+          <a href="#catalogo" class="btn btn-primario">
+            <span aria-hidden="true">🌱</span> Explorar Catálogo
+          </a>
+          <a href="#contacto" class="btn btn-secundario">
+            <span aria-hidden="true">✉️</span> Enviar Consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       CONTENIDO PRINCIPAL
+       ========================================== -->
+  <main id="contenido-principal" role="main">
+
+    <!-- ==========================================
+         SECCIÓN A: INFORMACIÓN DEL SITIO / SOBRE EL SITIO
+         ========================================== -->
+    <section id="sobre-el-sitio" class="seccion seccion-sobre" aria-labelledby="titulo-sobre">
+      <div class="contenedor">
+        <header class="seccion-encabezado">
+          <p class="subtitulo-seccion">Nuestra identidad</p>
+          <h2 id="titulo-sobre" class="titulo-seccion">Sobre el Jardín Botánico Silvestre</h2>
+          <p class="descripcion-seccion">
+            Nacido con la vocación de proteger la flora y educar en prácticas medioambientales responsables.
+          </p>
+        </header>
+
+        <div class="sobre-grid">
+          <article class="tarjeta-info">
+            <div class="tarjeta-info-icono" aria-hidden="true">🐝</div>
+            <h3 class="tarjeta-info-titulo">Conservación y Biodiversidad</h3>
+            <p class="tarjeta-info-texto">
+              Albergamos decenas de especies seleccionadas para crear microclimas estables y servir de refugio a insectos polinizadores y aves autóctonas.
+            </p>
+          </article>
+
+          <article class="tarjeta-info">
+            <div class="tarjeta-info-icono" aria-hidden="true">💧</div>
+            <h3 class="tarjeta-info-titulo">Gestión Hídrica Consciente</h3>
+            <p class="tarjeta-info-texto">
+              Utilizamos técnicas de riego eficiente por goteo, recolección de agua pluvial y acolchado orgánico (mulching) para optimizar cada gota de agua.
+            </p>
+          </article>
+
+          <article class="tarjeta-info">
+            <div class="tarjeta-info-icono" aria-hidden="true">🌾</div>
+            <h3 class="tarjeta-info-titulo">Agricultura 100% Ecológica</h3>
+            <p class="tarjeta-info-texto">
+              Prohibición absoluta de fertilizantes sintéticos o pesticidas tóxicos. Todo el sustrato se nutre con compost propio y preparados botánicos naturales.
+            </p>
+          </article>
+        </div>
+
+        <!-- Fila de datos prácticos del jardín -->
+        <aside class="datos-practicos" aria-label="Información para visitantes">
+          <h3 class="datos-practicos-titulo">Horarios y Visitas al Jardín</h3>
+          <ul class="datos-lista">
+            <li><strong>Lunes a Viernes:</strong> 09:00 a 18:00 h</li>
+            <li><strong>Sábados y Domingos:</strong> 10:00 a 14:00 h (visitas guiadas)</li>
+            <li><strong>Entrada:</strong> Libre y gratuita (donación voluntaria para el banco de semillas)</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN D: CATÁLOGO DE PLANTAS (INTERIOR Y EXTERIOR)
+         Filtrado estático en CSS mediante Radio Buttons y :checked
+         ========================================== -->
+    <section id="catalogo" class="seccion seccion-catalogo" aria-labelledby="titulo-catalogo">
+      <div class="contenedor">
+        <header class="seccion-encabezado">
+          <p class="subtitulo-seccion">Especies disponibles</p>
+          <h2 id="titulo-catalogo" class="titulo-seccion">Catálogo Botánico de Plantas</h2>
+          <p class="descripcion-seccion">
+            Selecciona la categoría deseada para filtrar el listado de manera interactiva sin recargar la página. Cada planta incluye su ficha técnica descargable en PDF.
+          </p>
+        </header>
+
+        <!-- CONTENEDOR DEL SISTEMA DE FILTRADO ESTÁTICO (CSS PURO) -->
+        <div class="sistema-filtrado">
+
+          <!-- INPUTS DE RADIO OCULTOS ACCESIBLES (CONTROLADORES DE ESTADO) -->
+          <input type="radio" name="filtro-categoria" id="cat-todas" class="filtro-radio" checked>
+          <input type="radio" name="filtro-categoria" id="cat-interior" class="filtro-radio">
+          <input type="radio" name="filtro-categoria" id="cat-exterior" class="filtro-radio">
+
+          <!-- BARRA DE BOTONES / PESTAÑAS VINCULADAS MEDIANTE LABEL FOR -->
+          <div class="filtro-controles" role="region" aria-label="Controles de filtro por categoría">
+            <p id="instruccion-filtro" class="filtro-leyenda">Selecciona una categoría de cultivo:</p>
+            <div class="filtro-botones" role="radiogroup" aria-labelledby="instruccion-filtro">
+              <label for="cat-todas" class="filtro-btn btn-todas">
+                <span class="filtro-icono" aria-hidden="true">🌱</span>
+                <span>Todas las plantas</span>
+                <span class="filtro-contador" aria-label="6 especies en total">(6)</span>
+              </label>
+
+              <label for="cat-interior" class="filtro-btn btn-interior">
+                <span class="filtro-icono" aria-hidden="true">🪴</span>
+                <span>Plantas de Interior</span>
+                <span class="filtro-contador" aria-label="3 especies de interior">(3)</span>
+              </label>
+
+              <label for="cat-exterior" class="filtro-btn btn-exterior">
+                <span class="filtro-icono" aria-hidden="true">☀️</span>
+                <span>Plantas de Exterior</span>
+                <span class="filtro-contador" aria-label="3 especies de exterior">(3)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- GRID DE TARJETAS DE PLANTAS (RESPONDE AL ESTADO DE LOS RADIOS) -->
+          <div class="catalogo-grid" id="grid-tarjetas" role="region" aria-live="polite" aria-label="Tarjetas de plantas filtradas">
+
+            <!-- ==========================================
+                 PLANTA 1: INTERIOR - MONSTERA DELICIOSA
+                 ========================================== -->
+            <article class="tarjeta-planta planta-interior" aria-labelledby="planta-1-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-interior">
+                  <span aria-hidden="true">🪴</span> Interior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/monstera.jpg" 
+                     alt="Follaje verde oscuro con características hojas perforadas y fenestradas de una Monstera deliciosa en maceta" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Ejemplar en maceta con tutor de fibra de coco.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-1-nombre" class="planta-titulo">Costilla de Adán</h3>
+                  <p class="planta-cientifico"><em>Monstera deliciosa</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Especie trepadora de origen tropical célebre por sus amplias hojas perforadas. Purifica el ambiente de interiores luminosos y es sumamente decorativa y resistente.
+                </p>
+
+                <!-- Ficha técnica rápida con dl (Description List semántica) -->
+                <dl class="ficha-datos">
+                  <div class="ficha-dato-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Luz indirecta brillante (evitar sol directo)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Moderado (1 vez por semana en verano)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>18°C a 27°C (sensible a heladas)</dd>
+                  </div>
+                </dl>
+
+                <!-- Enlace de descarga al PDF en carpeta info/ -->
+                <div class="tarjeta-accion">
+                  <a href="info/monstera.pdf" 
+                     download="Ficha-Monstera-Deliciosa.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF de la Costilla de Adán (Monstera deliciosa)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================
+                 PLANTA 2: INTERIOR - SANSEVIERIA TRIFASCIATA
+                 ========================================== -->
+            <article class="tarjeta-planta planta-interior" aria-labelledby="planta-2-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-interior">
+                  <span aria-hidden="true">🪴</span> Interior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/sansevieria.jpg" 
+                     alt="Hojas verticales rígidas y puntiagudas con bordes amarillos y jaspeado verde de Sansevieria trifasciata" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Planta purificadora ideal para dormitorios y despachos.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-2-nombre" class="planta-titulo">Lengua de Suegra</h3>
+                  <p class="planta-cientifico"><em>Sansevieria trifasciata</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Una de las plantas de interior más longevas y fáciles de cuidar. Reconocida por la NASA por filtrar sustancias volátiles del aire y liberar oxígeno durante la noche.
+                </p>
+
+                <dl class="ficha-datos">
+                  <div class="ficha-dato-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Muy adaptable (desde semisombra hasta luz viva)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Muy escaso (cada 15 a 20 días; drenaje estricto)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>15°C a 32°C (soporta ambientes secos)</dd>
+                  </div>
+                </dl>
+
+                <div class="tarjeta-accion">
+                  <a href="info/sansevieria.pdf" 
+                     download="Ficha-Sansevieria-Trifasciata.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF de la Lengua de Suegra (Sansevieria trifasciata)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================
+                 PLANTA 3: INTERIOR - EPIPREMNUM AUREUM (POTHOS)
+                 ========================================== -->
+            <article class="tarjeta-planta planta-interior" aria-labelledby="planta-3-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-interior">
+                  <span aria-hidden="true">🪴</span> Interior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/pothos.jpg" 
+                     alt="Tallos colgantes repletos de hojas cordiformes en tonos verde esmeralda y crema de Pothos dorado" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Enredadera versátil cultivada en cesta colgante.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-3-nombre" class="planta-titulo">Pothos Dorado</h3>
+                  <p class="planta-cientifico"><em>Epipremnum aureum</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Hermosa planta colgante o trepadora con follaje perenne matizado en amarillo. Prospera con escasa intervención y puede multiplicarse sencillamente por esquejes en agua.
+                </p>
+
+                <dl class="ficha-datos">
+                  <div class="ficha-datos-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Luz filtrada o media (no sol directo que queme hojas)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Cuando la capa superficial de tierra se note seca</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>16°C a 26°C (evitar corrientes heladas)</dd>
+                  </div>
+                </dl>
+
+                <div class="tarjeta-accion">
+                  <a href="info/pothos.pdf" 
+                     download="Ficha-Epipremnum-Aureum-Pothos.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF del Pothos Dorado (Epipremnum aureum)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================
+                 PLANTA 4: EXTERIOR - SPARTIUM JUNCEUM (RETAMAS)
+                 ========================================== -->
+            <article class="tarjeta-planta planta-exterior" aria-labelledby="planta-4-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-exterior">
+                  <span aria-hidden="true">☀️</span> Exterior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/retamas.jpg" 
+                     alt="Arbusto de retamas con ramas cilíndricas verdes cargadas de flores amarillas brillantes y aromáticas" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Ejemplar en plena floración en la rocalla exterior del jardín.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-4-nombre" class="planta-titulo">Retama de Olor</h3>
+                  <p class="planta-cientifico"><em>Spartium junceum</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Arbusto silvestre mediterráneo con ramas junciformes de verde perenne y profusa floración amarilla perfumada. Excelente fijadora de taludes y hábitat predilecto de abejas.
+                </p>
+
+                <dl class="ficha-datos">
+                  <div class="ficha-dato-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Pleno sol directo (mínimo 6-8 horas diarias)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Muy bajo (extraordinaria tolerancia a la sequía)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>-10°C a 38°C (tolera heladas y calor intenso)</dd>
+                  </div>
+                </dl>
+
+                <div class="tarjeta-accion">
+                  <a href="info/retamas.pdf" 
+                     download="Ficha-Retamas-Spartium-Junceum.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF de la Retama de Olor (Spartium junceum)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================
+                 PLANTA 5: EXTERIOR - LAVANDULA ANGUSTIFOLIA
+                 ========================================== -->
+            <article class="tarjeta-planta planta-exterior" aria-labelledby="planta-5-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-exterior">
+                  <span aria-hidden="true">☀️</span> Exterior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/lavanda.jpg" 
+                     alt="Hileras de lavanda provenzal con espigas florales violetas y follaje plateado aromático" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Borde aromático en el sendero principal del jardín.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-5-nombre" class="planta-titulo">Lavanda Fina</h3>
+                  <p class="planta-cientifico"><em>Lavandula angustifolia</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Arbusto aromático perenne de perfume relajante inconfundible. Atrae mariposas y polinizadores beneficiosos mientras repele plagas naturalmente en huertos y jardines.
+                </p>
+
+                <dl class="ficha-datos">
+                  <div class="ficha-dato-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Pleno sol obligatorio (indispensable para florecer)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Escaso (evitar encharcamientos; suelo drenado)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>-15°C a 35°C (muy resistente al frío invernal)</dd>
+                  </div>
+                </dl>
+
+                <div class="tarjeta-accion">
+                  <a href="info/lavanda.pdf" 
+                     download="Ficha-Lavanda-Angustifolia.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF de la Lavanda Fina (Lavandula angustifolia)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ==========================================
+                 PLANTA 6: EXTERIOR - BOUGAINVILLEA SPECTABILIS
+                 ========================================== -->
+            <article class="tarjeta-planta planta-exterior" aria-labelledby="planta-6-nombre">
+              <div class="tarjeta-badge-contenedor">
+                <span class="badge-categoria badge-exterior">
+                  <span aria-hidden="true">☀️</span> Exterior
+                </span>
+              </div>
+
+              <figure class="tarjeta-figura">
+                <img src="imagenes/buganvilla.jpg" 
+                     alt="Trepadora de buganvilla cubriendo un muro de piedra con abundantes brácteas fucsias intensas" 
+                     width="800" 
+                     height="520" 
+                     loading="lazy" 
+                     class="tarjeta-imagen">
+                <figcaption class="tarjeta-caption">Pérgola perimetral expuesta a la fachada sur.</figcaption>
+              </figure>
+
+              <div class="tarjeta-cuerpo">
+                <div class="tarjeta-titulares">
+                  <h3 id="planta-6-nombre" class="planta-titulo">Buganvilla</h3>
+                  <p class="planta-cientifico"><em>Bougainvillea spectabilis</em></p>
+                </div>
+
+                <p class="planta-descripcion">
+                  Trepadora leñosa mediterránea de espectacular floración viva. Sus hojas modificadas o brácteas aportan un estallido cromático prolongado durante los meses cálidos del año.
+                </p>
+
+                <dl class="ficha-datos">
+                  <div class="ficha-dato-fila">
+                    <dt>☀️ Exposición solar:</dt>
+                    <dd>Sol directo y calor (máxima iluminación exterior)</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>💧 Frecuencia de riego:</dt>
+                    <dd>Moderado en floración; espaciado en otoño-invierno</dd>
+                  </div>
+                  <div class="ficha-dato-fila">
+                    <dt>🌡️ Temperatura ideal:</dt>
+                    <dd>10°C a 40°C (resguardar de heladas severas)</dd>
+                  </div>
+                </dl>
+
+                <div class="tarjeta-accion">
+                  <a href="info/buganvilla.pdf" 
+                     download="Ficha-Buganvilla-Spectabilis.pdf" 
+                     class="btn btn-descarga" 
+                     aria-label="Descargar ficha técnica en PDF de la Buganvilla (Bougainvillea spectabilis)">
+                    <span class="descarga-icono" aria-hidden="true">📄</span>
+                    <span class="descarga-texto">Descargar Ficha Técnica</span>
+                    <span class="descarga-formato">PDF</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div><!-- Fin .catalogo-grid -->
+        </div><!-- Fin .sistema-filtrado -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN C: QUIÉN MANTIENE EL SITIO (AUTOR/CUIDADOR)
+         ========================================== -->
+    <section id="cuidador" class="seccion seccion-cuidador" aria-labelledby="titulo-cuidador">
+      <div class="contenedor">
+        <header class="seccion-encabezado">
+          <p class="subtitulo-seccion">Nuestros horticultores</p>
+          <h2 id="titulo-cuidador" class="titulo-seccion">Quién Cuida y Mantiene el Jardín</h2>
+          <p class="descripcion-seccion">
+            Conoce al equipo humano y técnico que preserva diariamente cada ejemplar del santuario botánico.
+          </p>
+        </header>
+
+        <article class="tarjeta-cuidador">
+          <div class="cuidador-multimedia">
+            <figure class="cuidador-figura">
+              <img src="imagenes/cuidador.jpg" 
+                   alt="Retrato de Martín E. Arismendi, maestro jardinero del santuario botánico, en el vivero de reproducción" 
+                   width="800" 
+                   height="520" 
+                   loading="lazy" 
+                   class="cuidador-imagen">
+              <figcaption class="cuidador-caption">Martín en el vivero de aclimatación de plántulas.</figcaption>
+            </figure>
+          </div>
+
+          <div class="cuidador-informacion">
+            <div class="cuidador-cabecera">
+              <span class="cuidador-rol">Maestro Jardinero &amp; Paisajista Botánico</span>
+              <h3 class="cuidador-nombre">Martín E. Arismendi</h3>
+              <p class="cuidador-trayectoria">18 años de experiencia en botánica aplicada y conservación ecológica.</p>
+            </div>
+
+            <blockquote class="cuidador-cita">
+              <p>«Cuidar un jardín no significa doblegar la naturaleza a nuestro capricho, sino aprender a escuchar las necesidades biológicas de cada semilla y facilitarle las condiciones para florecer con salud.»</p>
+            </blockquote>
+
+            <div class="cuidador-detalles">
+              <h4 class="detalles-subtitulo">Responsabilidades y Proyectos Activos:</h4>
+              <ul class="cuidador-lista">
+                <li>Supervisión y control biológico de plagas sin pesticidas sintéticos.</li>
+                <li>Dirección del Banco Comunitario de Semillas Tradicionales y Autóctonas.</li>
+                <li>Monitoreo del sistema de compostaje térmico y reutilización de restos de poda.</li>
+                <li>Coordinación de visitas guiadas y talleres educativos los fines de semana.</li>
+              </ul>
+            </div>
+
+            <div class="cuidador-contacto-rapido">
+              <p><strong>Días de atención en huerto:</strong> Martes y Jueves de 10:00 a 13:00 h.</p>
+              <a href="#contacto" class="btn btn-outline">Solicitar Asesoría Personalizada</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN B: INFORMACIÓN DE CONTACTO Y FORMULARIO
+         ========================================== -->
+    <section id="contacto" class="seccion seccion-contacto" aria-labelledby="titulo-contacto">
+      <div class="contenedor">
+        <header class="seccion-encabezado">
+          <p class="subtitulo-seccion">Hablemos de plantas</p>
+          <h2 id="titulo-contacto" class="titulo-seccion">Información y Formulario de Contacto</h2>
+          <p class="descripcion-seccion">
+            ¿Tienes dudas sobre los cuidados de alguna planta de nuestro catálogo o deseas programar una visita? Envíanos un mensaje y te responderemos a la brevedad.
+          </p>
+        </header>
+
+        <div class="contacto-columnas">
+          <!-- Columna 1: Información de contacto y ubicación -->
+          <aside class="contacto-info" aria-label="Canales directos de contacto">
+            <h3 class="contacto-info-titulo">Datos del Santuario</h3>
+            <p class="contacto-info-intro">
+              Puedes visitarnos en persona durante los horarios de apertura o comunicarte directamente por los canales oficiales del jardín:
+            </p>
+
+            <ul class="contacto-datos-lista">
+              <li class="contacto-dato-item">
+                <span class="contacto-icono" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Dirección física:</strong>
+                  <p>Camino de las Retamas 42, Vivero Municipal Norte</p>
+                </div>
+              </li>
+              <li class="contacto-dato-item">
+                <span class="contacto-icono" aria-hidden="true">✉️</span>
+                <div>
+                  <strong>Correo electrónico:</strong>
+                  <p><a href="mailto:info@jardinsilvestre.org" class="enlace-contacto">info@jardinsilvestre.org</a></p>
+                </div>
+              </li>
+              <li class="contacto-dato-item">
+                <span class="contacto-icono" aria-hidden="true">📞</span>
+                <div>
+                  <strong>Teléfono de atención:</strong>
+                  <p><a href="tel:+34910000000" class="enlace-contacto">+34 910 000 000</a></p>
+                </div>
+              </li>
+              <li class="contacto-dato-item">
+                <span class="contacto-icono" aria-hidden="true">🕒</span>
+                <div>
+                  <strong>Horario telefónico:</strong>
+                  <p>Lunes a Viernes de 09:00 a 15:00 h</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contacto-aviso">
+              <span class="aviso-icono" aria-hidden="true">ℹ️</span>
+              <p>
+                <strong>Compromiso ecológico:</strong> No enviamos folletos impresos por correo postal; toda la información se difunde en formato digital para reducir el consumo de papel.
+              </p>
+            </div>
+          </aside>
+
+          <!-- Columna 2: Formulario accesible con validación nativa -->
+          <div class="contacto-formulario-contenedor">
+            <form action="#contacto" method="post" class="formulario-contacto">
+              <fieldset class="formulario-bloque">
+                <legend class="formulario-leyenda">Formulario de Consulta Botánica</legend>
+                
+                <p class="formulario-nota">
+                  Los campos marcados con un asterisco (<span class="marca-requerido" aria-hidden="true">*</span>) son de cumplimentación obligatoria.
+                </p>
+
+                <!-- Campo: Nombre Completo -->
+                <div class="campo-grupo">
+                  <label for="campo-nombre" class="campo-etiqueta">
+                    Nombre completo <span class="marca-requerido" aria-label="obligatorio">*</span>
+                  </label>
+                  <input type="text" 
+                         id="campo-nombre" 
+                         name="nombre" 
+                         required 
+                         autocomplete="name" 
+                         placeholder="Ej: Clara Méndez" 
+                         aria-required="true" 
+                         aria-describedby="ayuda-nombre" 
+                         class="campo-input">
+                  <span id="ayuda-nombre" class="campo-ayuda">Indica tu nombre y apellidos para dirigirnos a ti.</span>
+                </div>
+
+                <!-- Campo: Correo Electrónico -->
+                <div class="campo-grupo">
+                  <label for="campo-email" class="campo-etiqueta">
+                    Correo electrónico <span class="marca-requerido" aria-label="obligatorio">*</span>
+                  </label>
+                  <input type="email" 
+                         id="campo-email" 
+                         name="email" 
+                         required 
+                         autocomplete="email" 
+                         placeholder="ejemplo@correo.com" 
+                         aria-required="true" 
+                         aria-describedby="ayuda-email" 
+                         class="campo-input">
+                  <span id="ayuda-email" class="campo-ayuda">Te responderemos a esta dirección en menos de 48 horas.</span>
+                </div>
+
+                <!-- Campo: Teléfono (opcional) -->
+                <div class="campo-grupo">
+                  <label for="campo-telefono" class="campo-etiqueta">
+                    Teléfono de contacto <span class="campo-opcional">(opcional)</span>
+                  </label>
+                  <input type="tel" 
+                         id="campo-telefono" 
+                         name="telefono" 
+                         autocomplete="tel" 
+                         placeholder="+34 600 000 000" 
+                         aria-describedby="ayuda-telefono" 
+                         class="campo-input">
+                  <span id="ayuda-telefono" class="campo-ayuda">Sólo si deseas que te contactemos por llamada o mensajería.</span>
+                </div>
+
+                <!-- Campo: Motivo de la Consulta -->
+                <div class="campo-grupo">
+                  <label for="campo-motivo" class="campo-etiqueta">
+                    Motivo de tu mensaje <span class="marca-requerido" aria-label="obligatorio">*</span>
+                  </label>
+                  <select id="campo-motivo" 
+                          name="motivo" 
+                          required 
+                          aria-required="true" 
+                          class="campo-select">
+                    <option value="" disabled selected>-- Elige una opción --</option>
+                    <option value="cuidados">Consulta sobre cuidado de especies</option>
+                    <option value="visita">Reserva de visita guiada o grupal</option>
+                    <option value="semillas">Intercambio en banco de semillas</option>
+                    <option value="voluntariado">Voluntariado en el huerto</option>
+                    <option value="otro">Otro motivo</option>
+                  </select>
+                </div>
+
+                <!-- Campo: Selección de Planta de Interés -->
+                <div class="campo-grupo">
+                  <label for="campo-planta" class="campo-etiqueta">
+                    Planta de interés <span class="campo-opcional">(opcional)</span>
+                  </label>
+                  <select id="campo-planta" name="planta_interes" class="campo-select">
+                    <option value="ninguna">-- Consulta general (ninguna en particular) --</option>
+                    <optgroup label="Plantas de Interior">
+                      <option value="monstera">Costilla de Adán (Monstera deliciosa)</option>
+                      <option value="sansevieria">Lengua de Suegra (Sansevieria trifasciata)</option>
+                      <option value="pothos">Pothos Dorado (Epipremnum aureum)</option>
+                    </optgroup>
+                    <optgroup label="Plantas de Exterior">
+                      <option value="retamas">Retama de Olor (Spartium junceum)</option>
+                      <option value="lavanda">Lavanda Fina (Lavandula angustifolia)</option>
+                      <option value="buganvilla">Buganvilla (Bougainvillea spectabilis)</option>
+                    </optgroup>
+                  </select>
+                </div>
+
+                <!-- Campo: Área de Texto / Mensaje -->
+                <div class="campo-grupo">
+                  <label for="campo-mensaje" class="campo-etiqueta">
+                    Mensaje o consulta <span class="marca-requerido" aria-label="obligatorio">*</span>
+                  </label>
+                  <textarea id="campo-mensaje" 
+                            name="mensaje" 
+                            rows="5" 
+                            required 
+                            aria-required="true" 
+                            placeholder="Cuéntanos tus dudas botánicas, espacio disponible, luz de tu vivienda o consulta general..." 
+                            aria-describedby="ayuda-mensaje" 
+                            class="campo-textarea"></textarea>
+                  <span id="ayuda-mensaje" class="campo-ayuda">Sé tan específico como desees sobre las condiciones de cultivo de tu hogar.</span>
+                </div>
+
+                <!-- Campo: Aceptación de Términos / Privacidad -->
+                <div class="campo-checkbox-grupo">
+                  <input type="checkbox" 
+                         id="campo-privacidad" 
+                         name="privacidad" 
+                         required 
+                         aria-required="true" 
+                         class="campo-checkbox">
+                  <label for="campo-privacidad" class="campo-checkbox-etiqueta">
+                    Acepto el tratamiento de mis datos de contacto exclusivamente para responder a esta consulta, conforme a la política de privacidad. <span class="marca-requerido" aria-label="obligatorio">*</span>
+                  </label>
+                </div>
+
+                <!-- Botones de Acción -->
+                <div class="formulario-acciones">
+                  <button type="submit" class="btn btn-primario btn-formulario">
+                    <span aria-hidden="true">📬</span> Enviar Consulta
+                  </button>
+                  <button type="reset" class="btn btn-secundario btn-formulario">
+                    <span aria-hidden="true">🔄</span> Limpiar Campos
+                  </button>
+                </div>
+
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================== -->
+  <footer class="pie-sitio" role="contentinfo">
+    <div class="contenedor pie-contenedor">
+      <div class="pie-seccion-principal">
+        <div class="pie-marca">
+          <span class="pie-icono" aria-hidden="true">🌿</span>
+          <span class="pie-nombre">Jardín Botánico Silvestre</span>
+        </div>
+        <p class="pie-lema">
+          Proyecto sin ánimo de lucro dedicado a la conservación de flora autóctona, la divulgación botánica y el fomento de la jardinería sostenible libre de tóxicos.
+        </p>
+      </div>
+
+      <div class="pie-columnas">
+        <div class="pie-columna">
+          <h4 class="pie-columna-titulo">Secciones del Sitio</h4>
+          <ul class="pie-enlaces">
+            <li><a href="#sobre-el-sitio">Sobre el jardín</a></li>
+            <li><a href="#catalogo">Catálogo de plantas</a></li>
+            <li><a href="#cuidador">Quién cuida el jardín</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna-titulo">Compromiso de Accesibilidad</h4>
+          <p class="pie-texto-accesibilidad">
+            Sitio web desarrollado íntegramente en HTML5 y CSS3 estricto, sin JavaScript. Cumple los criterios de accesibilidad WCAG 2.1 nivel AA y AAA (contraste, foco visible y navegación asistida).
+          </p>
+        </div>
+      </div>
+
+      <div class="pie-inferior">
+        <p class="pie-copyright">
+          &copy; Jardín Botánico Silvestre. Todos los derechos reservados. Fotografías y fichas botánicas bajo licencia abierta de divulgación.
+        </p>
+        <a href="#encabezado" class="enlace-subir" aria-label="Volver al encabezado superior de la página">
+          <span aria-hidden="true">↑</span> Volver arriba
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
